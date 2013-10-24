@@ -1,0 +1,19 @@
+<html>
+<body>
+<script type="text/javascript">
+function mapAction(map_name, action, area_id) {
+	if(action == "hover") {
+		document.getElementById(map_name + "_img").src = "ac_" + area_id + ".png";
+	}
+	if(action == "unhover") {
+		document.getElementById(map_name + "_img").src = "ia.png";
+	}
+	if(action == "click") {
+		alert("Clicked " + area_id + " on " + map_name);
+	}
+}
+</script>
+<img src="ia.png" usemap="#%(map_name)s" id="%(map_name)s_img">
+%(map_fragment)s
+</body>
+</html>
